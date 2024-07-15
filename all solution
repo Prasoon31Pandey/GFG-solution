@@ -1,0 +1,14 @@
+find the element that apperas one 
+
+https://www.geeksforgeeks.org/problems/element-appearing-once2552/1 --- link 
+
+code --- 
+class Sol{
+    public static int search(int n, int arr[]) {
+        Arrays.sort(arr);
+        for(int i=0; i<n; i++) {
+            if((i==0 || arr[i]!=arr[i-1]) && (i==n-1 || arr[i]!=arr[i+1])) return arr[i];
+        }
+        return -1;
+    }
+}
